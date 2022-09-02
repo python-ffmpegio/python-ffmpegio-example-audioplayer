@@ -1,0 +1,2 @@
+ffmpegio-core
+simpleaudio
