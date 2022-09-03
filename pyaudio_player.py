@@ -1,7 +1,6 @@
 from time import sleep
 import ffmpegio
 import pyaudio
-from pprint import pprint
 from contextlib import contextmanager
 
 from testfile_generator import testfiles
@@ -38,7 +37,7 @@ sample_fmt = "s16"
 with testfiles(1) as files:
     file = files[0]
 
-    # open ffmpegio's stream-reader to read nblk samples at a time
+    # open ffmpegio's stream-reader
     with ffmpegio.open(file, "ra", sample_fmt=sample_fmt, ac=ac, ar=ar) as f:
 
         # define callback (2)
